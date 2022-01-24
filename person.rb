@@ -1,6 +1,6 @@
 class Person
-    attr_writer :id
-    attr_accessor :name
+      attr_writer :id
+      attr_accessor :name
     attr_accessor :age
     
     def initialize (age, name = "Unknown", parent_permission = true)
@@ -33,8 +33,8 @@ end
 
 class Student < Person
     def initialize(classroom, age, name = "Unknown", parent_permission = true)
-        super(age, name = "Unknown", parent_permission = true)
-        @classroom = classroom
+     super(age, name = "Unknown", parent_permission = true)
+    @classroom = classroom
     end
     
     def play_hooky
@@ -43,13 +43,13 @@ class Student < Person
 end
 
 class Teacher < Person
-        def initialize(specialization, age, name = "Unknown", parent_permission = true)
-            super(age, name = "Unknown", parent_permission = true)
-           @specialization = specialization 
-        end
-        def can_use_services?
-            return true
-        end
+    def initialize(specialization, age, name = "Unknown", parent_permission = true)
+super(age, name = "Unknown", parent_permission = true)
+    @specialization = specialization 
+    end
+    def can_use_services?
+         return true
+    end
 end
 
 teacher = Teacher.new(25, "class");
