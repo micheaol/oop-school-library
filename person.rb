@@ -42,7 +42,11 @@ class Student < Person
     end
 end
 
-class Teacher
+class Teacher < Person
+        def initialize(specialization, age, name = "Unknown", parent_permission = true)
+            super(age, name = "Unknown", parent_permission = true)
+           @specialization = specialization 
+        end
 end
 
 student = Student.new(25, "class");
