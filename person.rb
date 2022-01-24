@@ -31,4 +31,16 @@ class Person
     end
 end
 
+class Student < Person
+    def initialize(classroom, age, name = "Unknown", parent_permission = true)
+        super(age, name = "Unknown", parent_permission = true)
+        @classroom = classroom
+    end
+    
+    def play_hooky
+        return "¯\(ツ)/¯"
+    end
+end
 
+student = Student.new(25, "class");
+puts student
