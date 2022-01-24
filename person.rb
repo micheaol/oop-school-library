@@ -42,5 +42,8 @@ class Student < Person
     end
 end
 
+class Teacher
+end
+
 student = Student.new(25, "class");
 puts student
