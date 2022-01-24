@@ -47,7 +47,12 @@ class Teacher < Person
             super(age, name = "Unknown", parent_permission = true)
            @specialization = specialization 
         end
+        def can_use_services?
+            return true
+        end
 end
 
-student = Student.new(25, "class");
-puts student
+teacher = Teacher.new(25, "class");
+student = Student.new("Jenny", 18)
+puts student.can_use_services?
+puts teacher.can_use_services?
