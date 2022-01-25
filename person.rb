@@ -2,7 +2,7 @@ class Person
   attr_writer :id
   attr_accessor :name, :age
 
-  def initialize(age, _name: 'Unknown', parent_permission: true)
+  def initialize(age, _name: 'Unknown', _parent_permission: true)
     @id = Random.rand(10...100)
     @name = name
     @age = age
@@ -24,8 +24,8 @@ class Person
 end
 
 class Student < Person
-  def initialize(classroom, age, _name: 'Unknown', parent_permission: true)
-    super(age, _name: 'Unknown', parent_permission: true)
+  def initialize(classroom, age, _name: 'Unknown', _parent_permission: true)
+    super(age, _name: 'Unknown', _parent_permission: true)
     @classroom = classroom
   end
 
@@ -35,8 +35,8 @@ class Student < Person
 end
 
 class Teacher < Person
-  def initialize(specialization, age, _name: 'Unknown', parent_permission: true)
-    super(age, _name: 'Unknown', parent_permission: true)
+  def initialize(specialization, age, _name: 'Unknown', _parent_permission: true)
+    super(age, _name: 'Unknown', _parent_permission: true)
     @specialization = specialization
   end
 
@@ -44,3 +44,6 @@ class Teacher < Person
     true
   end
 end
+
+student = Student.new("yet", 10)
+puts student.can_use_services?
