@@ -1,6 +1,5 @@
-# frozen_string_literal: true
-
 require './person'
+
 class Teacher < Person
   def initialize(specialization, age, _name: 'Unknown', _parent_permission: true)
     super(age, _name: 'Unknown', _parent_permission: true)
