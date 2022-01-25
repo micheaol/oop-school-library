@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Person
   attr_writer :id
   attr_accessor :name, :age
