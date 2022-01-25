@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Person
   attr_writer :id
   attr_accessor :name, :age
@@ -9,7 +11,7 @@ class Person
   end
 
   def can_use_services?
-    return @age >= 18 || @parent_permission == true
+    @age >= 18 || @parent_permission == true
   end
 
   def say_age
@@ -44,4 +46,3 @@ class Teacher < Person
     true
   end
 end
-
