@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Person
   attr_writer :id
   attr_accessor :name, :age
@@ -22,4 +24,3 @@ class Person
     @age >= 18
   end
 end
-
