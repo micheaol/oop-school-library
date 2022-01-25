@@ -10,8 +10,7 @@ class Person
 
   def can_use_services?
     return @age >= 18 || @parent_permission == true
-      true
-    
+    true
   end
 
   def say_age
@@ -49,5 +48,3 @@ end
 
 teacher = Teacher.new(25, 'class')
 student = Student.new('Jenny', 20)
-puts student.can_use_services?
-puts teacher.can_use_services?
