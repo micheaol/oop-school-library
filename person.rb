@@ -44,6 +44,3 @@ class Teacher < Person
     true
   end
 end
-
-student = Student.new("yet", 10)
-puts student.can_use_services?
