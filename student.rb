@@ -10,5 +10,3 @@ class Student < Person
     "¯\(ツ)/¯"
   end
 end
-student = Student.new('Hey', 10)
-puts student.can_use_services?

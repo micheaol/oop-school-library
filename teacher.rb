@@ -11,5 +11,3 @@ class Teacher < Person
   end
 end
 
-teacher = Teacher.new('Math', 25)
-puts teacher.can_use_services?
