@@ -2,7 +2,7 @@ require './corrector'
 
 class Person
   attr_writer :id
-  attr_accessor :name, :age
+  attr_accessor :name, :age, :rentals
 
   has_many :rentals
   has_many :books, through: :rentals
@@ -12,6 +12,7 @@ class Person
     @name = name
     @age = age
     @check_name = Corrector.new
+    @rentals = []
   end
 
   def can_use_services?
@@ -20,6 +21,11 @@ class Person
 
   def validate_name
     @name = check_name.correct_name(@name)
+  end
+  
+  def add_rentals(rental)
+    rentals << rental
+    rental.person = self
   end
 
   def say_age
