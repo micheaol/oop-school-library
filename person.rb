@@ -1,3 +1,5 @@
+require './corrector'
+
 class Person
   attr_writer :id
   attr_accessor :name, :age
@@ -6,6 +8,7 @@ class Person
     @id = Random.rand(10...100)
     @name = name
     @age = age
+    @check_name = Corrector.new
   end
 
   def can_use_services?
