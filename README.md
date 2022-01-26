@@ -33,7 +33,7 @@ To get a local copy up and running follow these simple example steps.
 
 Open your termnial and run the following command:
 
-<code>git clone https://github.com/AlexRS90/OOP-school-library.git</code>
+<code>git clone https://github.com/micheaol/oop-school-library.git</code>
 
 ### Prerequisites
 
