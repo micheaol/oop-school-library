@@ -22,7 +22,7 @@ class Person
   def validate_name
     @name = check_name.correct_name(@name)
   end
-  
+
   def add_rentals(rental)
     rentals << rental
     rental.person = self
