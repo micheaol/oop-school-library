@@ -147,12 +147,12 @@ class App
 
   def list_rental_by_person_id
     print "Person's ID: "
-    id = gets.chomp.to_i
+    id = gets.chomp
 
     puts 'Rentals: '
 
     @rentals.each do |rental|
-      puts "Date: #{rental.date} Book: #{rental.book.title} by: #{rental.book.author} if rental.person.id == id "
+      puts "Date: #{rental.date} Book: #{rental.book.title} by: #{rental.book.author} if rental.person.id == id.to_i "
     end
 
     user_choice
