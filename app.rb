@@ -35,7 +35,11 @@ class App
     def selected_choice(options)
         case(options)
         when '1'
-            puts "List of books"
+            list_books
+        when '2'
+            list_people
+        when '3'
+            create_person
         else
             puts "Exit"
         end
@@ -46,6 +50,16 @@ class App
         @books.each do |book| puts "Title: #{book.title}, Author: #{book.author}"
         user_choice
     end
-    
 
+    def list_people
+        @people.each do |person| puts "[#{person.classroom}] Name: #{person.name}, Age: #{person.age}"
+        user_choice
+    end
+
+    def create_person
+        puts "Do you want to create a student(1) or a teacher(2)?"
+        user_choice
+    end
+    
+end
 end
