@@ -124,11 +124,38 @@ class App
         end
 
         def create_rental
+            print "Please choose a book from the list: "
+            @books.each_with_index { |book, indx| puts "#{indx} Title: #{book.title} Author: #{book.author}"}
+
+            book_index_selected = gets.chomp.to_i
+
+            print "Please select a person in the list by NO [ NOT ID ]: "
+            @people.each_with_index { |person, indx| puts " No: #{indx} ID: #{person.id} Name: #{person.name} Age: #{person.age}" }
+            person_index_selected = gets.chomp.to_i
+
+            puts
+            print "Date: "
+            date = gets.chomp
+
+            rental = Rental.new(date, @books[book_index_selected], @people[person_index_selected])
+            @rentals << rental
+
             puts "Rentals created successfully!"
             user_choice
-        end 
+        end
+
+        def list_rental_by_person_id
+            print "Person's ID: "
+            person_id = gets.chomp.to_i
+
+            puts "Rentals: "
+
+            @rentals.each { |rental| puts "Date: #{rental.date} Book: #{rental.book.title} by: #{rental.book.author} if rental.person.id == person_id " }
+
+            user_choice
+        end
         def exit_app
-            puts "You exit from the APP."
+            puts "You exited from the APP."
             puts "Thank you for using OOP APP."
         end
 end
