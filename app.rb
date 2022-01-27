@@ -101,7 +101,7 @@ class App
     print 'Age: '
     age = gets.chomp
 
-    teacher = Teacher.new(age: age, name: name, specialization: @specialization)
+    teacher = Teacher.new(age: age, name: name, specialization: specialization)
     @people << teacher
     puts 'Teacher created successfully'
 
@@ -147,12 +147,12 @@ class App
 
   def list_rental_by_person_id
     print "Person's ID: "
-    person_id = gets.chomp.to_i
+    id = gets.chomp.to_i
 
     puts 'Rentals: '
 
     @rentals.each do |rental|
-      puts "Date: #{rental.date} Book: #{rental.book.title} by: #{rental.book.author} if rental.person.id == person_id "
+      puts "Date: #{rental.date} Book: #{rental.book.title} by: #{rental.book.author} if rental.person.id == id "
     end
 
     user_choice
