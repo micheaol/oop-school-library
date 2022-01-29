@@ -22,13 +22,13 @@ class App
   def user_choice
     puts ' '
     puts 'Please choose an option by entering a number: '
-    puts '1- List of books'
-    puts '2- List of People'
-    puts '3- Create a person'
-    puts '4- Create a book'
-    puts '5- Create a rental'
-    puts '6- List all rentals for a given person id'
-    puts '7- Exit'
+    puts '1.- List of books'
+    puts '2.- List of People'
+    puts '3.- Create a person'
+    puts '4.- Create a book'
+    puts '5.- Create a rental'
+    puts '6.- List all rentals for a given person id'
+    puts '7.- Exit'
     user_selection = gets.chomp
     selected_choice user_selection
   end
@@ -39,7 +39,7 @@ class App
       list_books
     when '2'
       list_people
-    when '3'
+    when '.3'
       create_person
     when '4'
       create_book
@@ -85,7 +85,7 @@ class App
     print 'Has parent permission? [Y/N]: '
     has_permission = gets.chomp.downcase == 'y'
 
-    student = Student.new(classroom: @classroom, age: age, name: name, parent_permission: has_permission)
+    student = Student.new(classroom: @classroom, age: age, name_: name, parent_permission: has_permission)
     @people << student
 
     puts 'Student created successfully'
